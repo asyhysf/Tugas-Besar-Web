@@ -29,7 +29,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM suku_bugis");
 
             <div class="dropdown-menu" id="dropdown-menu">
                 <a href="profil.php">Lihat Profil</a>
-                <a href="index.php">Keluar</a>
             </div>
         </nav>
     </header>
