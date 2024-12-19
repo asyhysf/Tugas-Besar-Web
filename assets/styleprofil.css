@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cambria', sans-serif;
+}
+
+body {
+    background-color: #A4907C;
+}
+
+/* NAVBAR (Header) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Warna latar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.navbar .logo {
+    position: absolute; /* Logo diposisikan absolut */
+    left: 50%; /* Geser ke tengah horizontal */
+    transform: translateX(-50%); /* Koreksi posisi agar tepat di tengah */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara logo dan teks */
+}
+
+.navbar .logo img {
+    width: 50px; /* Ukuran logo */
+    height: 50px;
+}
+
+.navbar .logo .brand-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000; /* Warna teks */
+}
+
+/* USER ICON */
+.navbar .user-icon {
+    margin-left: auto; 
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user-icon img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* TAMPAKAN PROFIL & EDIT PROFIL */
+.profil-container, .set-profil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kartu Profil */
+.profil-card, .set-profil-card {
+    background-color: #ffffff;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+}
+
+.profil-avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    color: #ffffff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.profil-avatar img {
+    width: 100%; /* Ukuran gambar akan menyesuaikan kontainer */
+    height: 100%;
+    object-fit: cover; /* Gambar akan dipotong jika ukurannya berbeda */
+}
+
+/* Teks Profil */
+.profil-username {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.profil-email {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.edit-button {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    background-color: #000; /* Warna background */
+    color: #fff; /* Warna teks */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block; /* Agar tampak seperti tombol */
+    text-align: center;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #333; /* Warna saat hover */
+}
+
+
+/* Tombol */
+button, .logout-link {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.logout-link {
+    background-color: transparent;
+    color: #A4907C;
+    font-weight: normal;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+/* Kontainer Edit Profil */
+.set-profil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kartu Edit Profil */
+.set-profil-card {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Profil Avatar */
+.profil-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-button {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+/* Input File (Hidden) */
+#upload-avatar {
+    display: none;
+}
+
+/* Label & Input Field */
+.set-profil-card label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+}
+
+.set-profil-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+/* Tombol Grup */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-button, .save-button {
+    text-decoration: none;
+    width: 120px; /* Lebar tombol */
+    height: 40px; /* Tinggi tombol */
+    padding: 10px; /* Ruang dalam tombol */
+    font-size: 1rem; /* Ukuran teks dalam tombol */
+    border-radius: 5px; /* Membuat tombol agak membulat */
+    cursor: pointer; /* Menjadikan kursor seperti klik */
+}
+
+.cancel-button {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.save-button {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Efek Hover untuk Tombol Simpan */
+.save-button:hover {
+    background-color: #333;
+    transform: scale(1.05); /* Membesarkan tombol */
+    transition: 0.3s ease;
+}
+
+/* Efek Hover untuk Tombol Batal */
+.cancel-button:hover {
+    background-color: #f5f5f5;
+    color: #333;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}

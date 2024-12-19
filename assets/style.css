@@ -1,0 +1,341 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cambria', sans-serif;
+}
+
+body {
+    background-color: #C8B6A6;
+    color: #000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFF;
+    position: fixed;
+    top: 0; /* Tempel di bagian atas */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Pastikan navbar di atas elemen lain */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.navbar .brand-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    text-transform: capitalize;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: left;
+    color: #FFF;
+    height: 450px;
+}
+
+.hero-content img {
+    position: absolute; /* Posisi absolut untuk gambar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar memenuhi div */
+    z-index: -1; /* Kirim gambar ke belakang */
+    filter: brightness(70%); /* Opsional: Gelapkan gambar agar teks lebih terbaca */
+}
+
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    display: flex; /* Menggunakan flexbox */
+    justify-content: flex-end; /* Pindahkan konten ke sebelah kanan */
+    align-items: center; /* Pusatkan secara vertikal */
+    text-align: left; /* Teks rata kiri */
+    padding: 70px 20px;
+    color: #FFF; /* Warna teks */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px; /* Tinggi elemen, sesuaikan dengan kebutuhan */
+}
+
+.hero-content p {
+    position: relative;
+    z-index: 2;
+    padding: 20px 30px; /* Ruang di sekitar teks */
+    max-width: 600px; /* Batasi lebar konten */
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0; /* Hilangkan margin bawaan */
+}
+
+.hero-content p {
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 2;
+    padding: 50px 30px;
+    width: 100%;
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Section General */
+section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+/* About Us */
+.about-us {
+    width: 50%;
+    max-width: 900px;
+    align-items: center; /* Pusatkan secara horizontal */
+    text-align: center; /* Teks rata tengah */
+    margin: 0 auto; /* Tengah horizontal */
+}
+
+.about-us p {
+    background-color: #F1DEC9;
+    color: #333;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: left; /* Teks rata tengah */
+    font-size: 1rem;
+    line-height: 1.8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #FFF;
+    border-radius: 100px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 180px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-weight: medium;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Tempat Bersejarah */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 15px; /* Jarak antar gambar */
+    width: 80%; /* Ukuran grid */
+    margin: 0 auto; /* Pusatkan secara horizontal */
+}
+
+.image-item {
+    position: relative; /* Membuat elemen pembungkus bisa diatur posisinya */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+}
+
+.image-grid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover; /* Gambar tetap proporsional */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); /* Efek membesar saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lebih tegas saat hover */
+}
+
+.image-overlay {
+    position: absolute; /* Posisi absolut di atas gambar */
+    top: 50%; /* Posisikan teks di tengah vertikal */
+    left: 50%; /* Posisikan teks di tengah horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan teks secara tepat */
+    color: #ffffff; /* Warna teks */
+    font-size: 1.2rem; /* Ukuran font */
+    font-weight: bold; /* Berat font */
+    opacity: 0; /* Teks disembunyikan secara default */
+    transition: opacity 0.3s ease; /* Efek transisi untuk teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.image-item:hover .image-overlay {
+    opacity: 1; /* Teks muncul saat hover */
+}
+
+/* Link Styles for Cards and Image Items */
+.card-container a,
+.image-grid a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Ensure text color is inherited from the card or image container */
+}
+
+/* Optional: Add hover effects for clickable items */
+.card-container a:hover,
+.image-grid a:hover {
+    transform: scale(1.05); /* Optional: Enhance the hover effect */
+}
+
+.card-container a img,
+.image-grid a img {
+    cursor: pointer; /* Make it clear that the images are clickable */
+}
+
+
+/* Footer */
+footer {
+    background-color: #8D7B68;
+    color: #000000;
+    font-style: bold;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    display: none; /* Sembunyikan menu secara default */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+.welcome-text {
+    position: absolute; /* Mengaktifkan positioning absolut */
+    bottom: 20px; /* Jarak dari bawah */
+    left: 20px; /* Jarak dari kiri */
+    animation: fadeIn 2s ease-in-out;
+    z-index: 2;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Animasi Fade In */
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section img {
+    animation: zoomIn 2s ease-in-out;
+}
+
+/* Animasi Zoom In */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
