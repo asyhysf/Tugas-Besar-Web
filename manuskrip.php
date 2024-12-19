@@ -10,7 +10,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM manuskrip");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang SulSel - Halaman Utama</title>
+    <title>Manuskrip Kuno - Tentang SulSel</title>
     <link rel="stylesheet" href="assets/suku.css">
 </head>
 <body>

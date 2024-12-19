@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="navbar">
         <div class="brand">
-            <img src="img/logo.png" alt="Logo">
+            <img src="assets/pinisi1.png" alt="Logo">
             <span>TentangSulSel - Edit Data</span>
         </div>
     </div>

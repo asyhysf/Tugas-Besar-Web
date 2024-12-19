@@ -188,7 +188,7 @@ if (isset($_POST['submit'])) {
         <?php
         $tables = ['data_suku', 'suku_bugis', 'suku_toraja', 'senjata_tradisional', 'manuskrip'];
         foreach ($tables as $table) {
-            echo "<h3>Data " . ucfirst(str_replace('_', ' ', $table)) . "</h3>";
+            echo "<h3>" . ucfirst(str_replace('_', ' ', $table)) . "</h3>";
             $result = $koneksi->query("SELECT * FROM $table");
             echo "<table>
                     <tr>

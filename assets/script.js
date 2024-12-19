@@ -36,16 +36,9 @@ cancelButton.addEventListener('click', () => {
     profilContainer.style.display = 'flex';
 });
 
-function confirmLogout() {
-    const confirmAction = confirm("Apakah Anda yakin ingin keluar?");
-    if (confirmAction) {
-        window.location.href = "index.php"; // Redirect ke logout.php
-    }
-}
-
-document.getElementById('logout-link').addEventListener('click', function (event) {
+function confirmLogout(event) {
     const confirmAction = confirm("Apakah Anda yakin ingin keluar?");
     if (!confirmAction) {
         event.preventDefault(); // Mencegah navigasi jika pengguna memilih "Cancel"
     }
-});
+}
